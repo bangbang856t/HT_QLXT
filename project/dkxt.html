@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="Jackie Do" />
+    <link href="dkxt.css" rel="stylesheet" type="text/css"/>
+    
+    <link href="template/css/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="myscript.js"></script>
+    
+    <script type="text/javascript" src="template/js/script.js"></script>
+	<title> Đăng ký xét tuyển </title>
+    </script>
+</head>
+
+<body> 
+    <div id="main dkxt">
+      <div id="top" class="container"> 
+        <div id="top_banner"> 
+            <img src="bck.png" width="982px" height="120px" alt="banner trang chu ĐHCT" usemap="#map_logo" />
+            <map name="map_logo" id="map_id">
+            <area href="http://www.ctu.edu.vn" alt="Trường Đại học Cần Thơ" shape="polygon" coords="26, 64, 77, 11, 128, 63, 72, 113"/>                    <area shape="circle" coords="100,80,52" href="trangchuDHCT.php" />
+            </map>
+     </div>
+     </div>
+    <div id="chua_icon_trangchu">
+        <div id="icon_trangchu"> Đăng kí xét tuyển trực tuyến </div>
+    </div> 
+    <div class="container">
+        <div class="dkxt-form">
+            <form action="xuly_dkxt.php" method="post"> 
+               <div class="form-group">
+        			   <label> Số báo danh  </label>
+        			   <input type="text" id="isbd" name="sbd" required />
+                 <input type="submit" name="btn1_submit" value="Submit" />
+              </div>
+            </form>
+        </div>
+        <?php 
+          if(isset($_POST["btn1_submit"])){
+        ?>
+        <div class="xuly-dkxt-form">
+            <?php 
+            if(isset($error) && !empty($error)) {
+                echo '<div class="error"><ul>';
+                $errLength = count($error);
+                for($i = 0; $i< $errLength; $i++) {
+                     echo '<li>' .$error[$i]. '</li>';
+                }
+                echo '</ul></div>';
+                empty($error);               
+            } else {
+            ?>
+            <form action="xuly_dkxt.php" method="post"> 
+              <div class="dkxt">
+                <div class="thongtinthissinh">
+                  <div class="top_ttts"> 
+                    <div class="note_table">
+                      <h3>Thông tin thí sinh</h3>
+                    </div>
+                  </div>
+                  <div class="left_ttts"> 
+                    <div class="form-group">
+                        <label for="iname">Họ Tên:</label>
+                        <input type="text" class="input-group" id="iname" <?php echo (isset($data_hsxt[0]["name"])) ? 'value ="'.$data_hsxt[0]["name"].'"':'';?> name="names">
+                    </div>
+                    <div class="form-group">
+                        <label for="sobd">Số báo danh :</label>
+                        <input type="text" class="input-group" id="sobd" name="name"<?php echo (isset($data_hsxt[0]["id"])) ? 'value ="'.$data_hsxt[0]["id"].'"':'';?> >
+                    </div>
+                    <div class="form-group">
+                        <label for="gt">Giới tính :</label>
+                        <input type="text" class="input-group" id="gt" name="gt"<?php echo (isset($data_hsxt[0]["gt"])) ? 'value ="'.$data_hsxt[0]["gt"].'"':'';?> >
+                    </div>
+                    <div class="form-group">
+                        <label for="ns">Ngày, tháng, năm sinh :</label>
+                        <input type="date" class="input-group" id="ns" name="ndate"<?php echo (isset($data_hsxt[0]["ns"])) ? 'value ="'.$data_hsxt[0]["ns"].'"':'';?> >
+                    </div>
+                    <div class="form-group">
+                        <label for="iaddr">Địa chỉ liên hệ :</label>
+                        <input type="text" class="input-group" id="iaddr" name="addr"<?php echo (isset($data_hsxt[0]["addr"])) ? 'value ="'.$data_hsxt[0]["addr"].'"':'';?> >
+                    </div>
+                  </div>
+                  <div class="right_ttts"> 
+                    <div class="form-group">
+                        <label for="idt">Điện Thoại:</label>
+                        <input type="text" class="input-group" id="idt" <?php echo (isset($data_hsxt[0]["dt"])) ? 'value ="'.$data_hsxt[0]["dt"].'"':'';?> name="dt" />
+                    </div>
+                    <div class="form-group">
+                        <label for="iemail">Email :</label>
+                        <input type="email" class="input-group" id="iemail" <?php echo (isset($data_hsxt[0]["email"])) ? 'value ="'.$data_hsxt[0]["email"].'"':'';?> name="email" />
+                    </div>
+                    <div class="form-group">
+                      <label>Khu vực  :</label>
+                      <select name="khuvuc">
+                          <option value="1">khu vực 1</option>
+                          <option value="2">khu vực 2</option>
+                          <option value="3">khu vực 3</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Đối tượng  :</label>
+                        <select name="doituong">
+                            <option value="1">Đối tượng 1</option>
+                            <option value="2">Đối tượng 2</option>
+                            <option value="3">Đối tượng 3</option>
+                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Các điều chình thông tin cá nhân và chế độ ưu tiên(nếu có):</label>
+           	            <textarea type="" id="ittcn" name="ttcn" rows="3" cols="50" ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="nguyenvong">
+                  <div class="note_table">
+                        <h3>Các nguyện vọng đăng ký</h3>
+                        <h5>(xếp thứ tự ưu tiên từ trên xuông)</h5>
+                  </div>
+                  <div class="table nguyenvong-table">
+                    <table class="dknv">
+                       <thead class="nhan">
+                        <tr>
+                            <th>Nguyện vọng</th>
+                            <th>Mã ngành</th>
+                            <th>Tổ hợp môn thi</th>
+                            <th>Cơ sở đào tạo</th>
+                            <th>Điểm môn 1</th>
+                            <th>Điểm môn 2</th>
+                            <th>Điểm môn 3</th>
+                            <th>Tổng điểm </th>
+                          <tr>
+                       </thead> 
+                       <tbody>
+                         <tr class="h1">
+                            <td class="nguyenvong"></td>
+                            <td><input type="text" id="imanganh1" name="manganh"></td>
+                            <td class="tohopmonthi" id="nganh1"></td>
+                            <td><select name="csdt">
+                                <option value="cs1">Khu 2 - Đại học Cần Thơ</option>
+                                <option value="cs2">Khu Hòa An</option>
+                             </select></td>
+                            <td><input type="text" id="idiemmon1nganh1" name="diemmon1" > </td>
+                            <td><input type="text" id="idiemmon2nganh1" name="diemmon2" > </td>
+                            <td><input type="text" id="idiemmon3nganh1" name="diemmon3" > </td> 
+                            <td class="tongdiem"></td>
+                         </tr> 
+                         <tr class="h2">
+                              <td class="nguyenvong"></td>
+                              <td><input type="text" id="imanganh2" name="manganh"></td>
+                              <td class="tohopmonthi" id="nganh2"></td>
+                              <td><select name="csdt">
+                                  <option value="cs1">Khu 2 - Đại học Cần Thơ</option>
+                                  <option value="cs2">Khu Hòa An</option>
+                               </select></td>
+                              <td><input type="text" id="idiemmon1nganh2" name="diemmon1" > </td>
+                              <td><input type="text" id="idiemmon2nganh2" name="diemmon2" > </td>
+                              <td><input type="text" id="idiemmon3nganh2" name="diemmon3" > </td> 
+                              <td class="tongdiem"></td>
+                         </tr> 
+                         <tr class="h3">
+                         <td class="nguyenvong"></td>
+                              <td><input type="text" id="imanganh3" name="manganh"></td>
+                              <td class="tohopmonthi" id="nganh3"></td>
+                              <td><select name="csdt">
+                                  <option value="cs1">Khu 2 - Đại học Cần Thơ</option>
+                                  <option value="cs2">Khu Hòa An</option>
+                               </select></td>
+                              <td><input type="text" id="idiemmon1nganh3" name="diemmon1" > </td>
+                              <td><input type="text" id="idiemmon2nganh3" name="diemmon2" > </td>
+                              <td><input type="text" id="idiemmon3nganh3" name="diemmon3" > </td> 
+                              <td class="tongdiem"></td>
+                         </tr> 
+                         <tr class="h4">
+                              <td class="nguyenvong"></td>
+                              <td><input type="text" id="imanganh4" name="manganh"></td>
+                              <td class="tohopmonthi" id="nganh4"></td>
+                              <td><select name="csdt">
+                                  <option value="cs1">Khu 2 - Đại học Cần Thơ</option>
+                                  <option value="cs2">Khu Hòa An</option>
+                               </select></td>
+                              <td><input type="text" id="idiemmon1nganh4" name="diemmon1" > </td>
+                              <td><input type="text" id="idiemmon2nganh4" name="diemmon2" > </td>
+                              <td><input type="text" id="idiemmon3nganh4" name="diemmon3" > </td> 
+                              <td class="tongdiem"></td>
+                         </tr> 
+                        </tbody>
+                    </table>
+                  </div>   
+                </div>   
+                
+                <div class="xacnhan" id="ixacnhan" style="margin-top: 10px">            
+                    <div class="xacnhan1" style="font-weight: bold;color: blue">Nhập mã xác nhận :</div>    
+                    <div class="xacnhan2">
+                      <div class="xacnhan-input">
+                        <input class="input-normal" name="captcha" placeholder="Enter captcha..">
+                      -</div> 
+                      <div class="xacnhan-image">
+                        <img alt="captcha" class="ixacnhan-image" src="http://dangky.hutech.edu.vn/captcha/captcha-form?1443849520480"> 
+                        <span class="wrap-refresh-image"><img src="http://dangky.hutech.edu.vn/s-img/refresh.jpg" class="j-load captcha re-captcha"></span>
+                      </div>
+                    </div>
+                </div>    
+                  
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary" name="btn_submit">Dang Ky</button>
+                </div>
+               </div> 
+            </form>
+            <?php 
+                } // end check error
+            ?>
+        </div>
+        <?php } ?>
+    </div>
+    
+</body>
+</html>

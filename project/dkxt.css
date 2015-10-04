@@ -1,0 +1,71 @@
+*{
+    padding : 0px;
+    margin: 0px;
+}
+#top{
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(http://tuyensinh.ctu.edu.vn/templates/bluesoul-tg/images/back.png);
+    background-origin: padding-box;
+    background-size: auto;
+    color: rgb(85, 85, 85);
+    display: block;
+    font-family: Arial;
+    font-size: 12px;
+    height: 120px;
+    line-height: 15.6000003814697px;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 174.5px;
+    margin-right: 174.5px;
+    text-align: center;
+    width: 1000px;
+    padding-top: 4px;
+}
+#icon_trangchu{
+    clear: both;
+    color: rgb(85, 85, 85);
+    display: block;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 15.6000003814697px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 8px;
+    padding-top: 0px;
+    text-align: left;
+    width: 980px;
+}
+#chua_icon_trangchu{
+   color: rgb(85, 85, 85);
+    display: block;
+    font-family: Arial;
+    font-size: 12px;
+    height: 25px;
+    line-height: 15.6000003814697px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 184.5px;
+    margin-right: 184.5px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 12px;
+    position: relative;
+    text-align: left;
+    width: 980px;
+    z-index: 1;
+}

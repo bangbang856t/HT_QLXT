@@ -1,0 +1,155 @@
+*{
+    padding : 0px;
+    margin: 0px;
+}
+#top{
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(http://tuyensinh.ctu.edu.vn/templates/bluesoul-tg/images/back.png);
+    background-origin: padding-box;
+    background-size: auto;
+    color: rgb(85, 85, 85);
+    display: block;
+    font-family: Arial;
+    font-size: 12px;
+    height: 120px;
+    line-height: 15.6000003814697px;
+    list-style-type: none;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-top: 4px;
+}
+#icon_trangchu{
+    clear: both;
+    color: rgb(85, 85, 85);
+    display: block;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 15.6000003814697px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 8px;
+    padding-top: 0px;
+    text-align: left;
+    width: 980px;
+}
+#chua_icon_trangchu{
+   color: rgb(85, 85, 85);
+    display: block;
+    font-family: Arial;
+    font-size: 12px;
+    height: 25px;
+    line-height: 15.6000003814697px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 184.5px;
+    margin-right: 184.5px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 12px;
+    position: relative;
+    text-align: left;
+    width: 980px;
+    z-index: 1;
+}
+// trong css han che dung ID, chi duoc dung class, trong js moi dung ID nha
+
+body {
+    
+}
+
+.container {
+    width: 70%;
+    min-width: 980px;
+    margin: 0 auto;
+}
+
+/* form format */
+label {
+    display: inline-block;
+    min-width: 150px;
+    padding: 5px 10px;
+}
+.form-group {
+    margin: 3px 5px;
+}
+.btn {
+    padding: 5px 10px;
+}
+.btn-primary {
+    background: #1c5a85;
+    color: #ffffff;
+}
+
+/* Thong Tin Tuyen Sinh*/
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.table .dknv th,
+.table .dknv td {
+    padding: 3px 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.table .dknv th + th,
+.table .dknv td + td {
+    border-left: none;
+}
+.table .dknv thead  {
+    border-bottom: 1px solid #1c1c1c;
+}
+.table .dknv input, 
+.table .dknv select {
+    padding: 3px;
+}
+.table.nguyenvong-table {
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+}
+.thongtinthissinh {
+    position: relative;
+    display: block;
+    width: inherit;
+    overflow: hidden;
+}
+.thongtinthissinh .left_ttts {
+    padding: 10px 30px 20px 0;
+    position: relative;
+    display: block;
+    width: 47%;
+    float: left;
+}
+.thongtinthissinh .right_ttts {
+    padding: 10px 30px 20px 0;
+    position: relative;
+    display: block;
+    width: 43%;
+    float: left;
+}
+.left_ttts + .right_ttts {
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+}
+
+.thongtinthissinh input, 
+.thongtinthissinh select {
+    display: inline-block;
+    padding: 3px 5px;
+}
+

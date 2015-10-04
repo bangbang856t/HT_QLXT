@@ -1,0 +1,67 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+#layout {
+    width: 450px;
+    height: 350px;
+    border: 1px solid #A8A7A7;
+    margin: 200px auto;
+}
+#dnht {
+    width: 440px;
+    height: 40px ;
+    border: 1px solid #A8A7A7;
+    background: #DEE1DD;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#body {
+    width: 500px;
+    height: 200px;
+    margin-top: 40px;;
+    
+}
+        #bodyhinh{
+            width: 30px;
+            height: 30px;
+            
+            
+            
+        }
+        #bodytextbox{
+           width: 150px;
+           height: 70px; 
+           float: left;
+           margin-left: 200px;
+              
+        }
+#dangnhap {
+    width: 100px;
+    height: 50px ;
+    float: right;
+    margin-right:20px;
+    
+    
+    
+  
+    
+}
+.chan {
+    clear:both;
+}
+ input{
+    line-height: 22px;
+    margin: 5px;
+    border: 1px solid #397ECD ;
+ 
+} 
+#login2 input{
+    width:80px;
+    height:30px;
+	border:1px #397ECD solid;
+    background: ##DEE1DD ;
+    
+ 
